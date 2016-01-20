@@ -17,6 +17,7 @@
 		<log4j.version>1.2.17</log4j.version>
 		<slf4j.version>1.7.12</slf4j.version>
 		<babelfish.version>0.3.1-SNAPSHOT</babelfish.version>
+		<plugin.license.version>1.8</plugin.license.version>
 		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
 	</properties>
 
@@ -56,6 +57,28 @@
 	<build>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>${plugin.license.version}</version>
+					<configuration>
+						<inceptionYear>${project.inceptionYear}</inceptionYear>
+						<organizationName>${project.organization.name}</organizationName>
+						<projectName>${project.name}</projectName>
+						<force>true</force>
+						<licenseFile>${basedir}/LICENSE</licenseFile>
+						<licenseName>apache_v2</licenseName>
+					</configuration>
+					<executions>
+						<execution>
+							<id>update-project-license</id>
+							<goals>
+								<goal>update-project-license</goal>
+							</goals>
+							<phase>generate-resources</phase>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>findbugs-maven-plugin</artifactId>
@@ -114,6 +137,10 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>license-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
