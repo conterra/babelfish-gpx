@@ -10,22 +10,33 @@
 
 	<name>tRESTle Babelfish GPX plugin</name>
 	<url>http://developernetwork.conterra.de</url>
+	<inceptionYear>2016</inceptionYear>
+	<description>A plugin to deploy GPX files on the tRESTle Babelfish</description>
+	<organization>
+		<name>con terra - Gesellschaft für Angewandte Informationstechnologie mbH</name>
+		<url>http://www.conterra.de</url>
+	</organization>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.7</java.version>
+		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<slf4j.version>1.7.12</slf4j.version>
+		<slf4j.version>1.7.16</slf4j.version>
 		<babelfish.version>0.3.1-SNAPSHOT</babelfish.version>
 		<plugin.license.version>1.8</plugin.license.version>
-		<plugin.findbugs.version>3.0.1</plugin.findbugs.version>
+		<plugin.findbugs.version>3.0.3</plugin.findbugs.version>
+		<plugin.compiler.version>3.5.1</plugin.compiler.version>
+		<plugin.javadoc.version>2.10.3</plugin.javadoc.version>
+		<plugin.source.version>3.0.0</plugin.source.version>
+		<plugin.release.version>2.5.3</plugin.release.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -103,7 +114,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.3</version>
+					<version>${plugin.compiler.version}</version>
 					<configuration>
 						<source>${java.version}</source>
 						<target>${java.version}</target>
@@ -112,7 +123,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
-					<version>2.10.2</version>
+					<version>${plugin.javadoc.version}</version>
 					<configuration>
 						<!-- <additionalparam>-Xdoclint:none</additionalparam> -->
 						<links>
@@ -124,11 +135,11 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>2.4</version>
+					<version>${plugin.source.version}</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5.1</version>
+					<version>${plugin.release.version}</version>
 					<configuration>
 						<preparationGoals>clean</preparationGoals>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
@@ -159,7 +170,6 @@
 		</plugins>
 	</reporting>
 
-	<description>A plugin to deploy GPX files on the tRESTle Babelfish</description>
 	<scm>
 		<developerConnection>scm:git:git@github.com:conterra/babelfish-gpx.git</developerConnection>
 	</scm>
