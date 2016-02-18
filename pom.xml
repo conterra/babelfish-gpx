@@ -161,7 +161,7 @@
 
 	<description>A plugin to deploy GPX files on the tRESTle Babelfish</description>
 	<scm>
-		<developerConnection>scm:svn:https://svn01.esri-de.com/svn/PRJ_sdi.suite/produkte/mapapps/incubator/babelfish/babelfish-gpx/trunk</developerConnection>
+		<developerConnection>scm:git:git@github.com:conterra/babelfish-gpx.git</developerConnection>
 	</scm>
 
 	<distributionManagement>
