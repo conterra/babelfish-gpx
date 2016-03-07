@@ -187,6 +187,7 @@
 
 	<scm>
 		<developerConnection>scm:git:git@github.com:conterra/babelfish-gpx.git</developerConnection>
+		<url>https://github.com/conterra/babelfish-gpx</url>
 	</scm>
 
 	<distributionManagement>
