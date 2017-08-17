@@ -27,14 +27,16 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
-		<lombok.version>1.16.12</lombok.version>
-		<slf4j.version>1.7.24</slf4j.version>
+		
+		<lombok.version>1.16.18</lombok.version>
+		<slf4j.version>1.7.25</slf4j.version>
 		<babelfish.version>0.4.0-SNAPSHOT</babelfish.version>
 		<junit.version>4.12</junit.version>
-		<mockito.version>2.7.14</mockito.version>
-		<plugin.license.version>1.12</plugin.license.version>
+		<mockito.version>2.8.47</mockito.version>
+		
+		<plugin.license.version>1.13</plugin.license.version>
 		<plugin.findbugs.version>3.0.4</plugin.findbugs.version>
-		<plugin.compiler.version>3.6.1</plugin.compiler.version>
+		<plugin.compiler.version>3.6.2</plugin.compiler.version>
 		<plugin.javadoc.version>2.10.4</plugin.javadoc.version>
 		<plugin.source.version>3.0.1</plugin.source.version>
 		<plugin.release.version>2.5.3</plugin.release.version>
@@ -137,8 +139,10 @@
 					<version>${plugin.javadoc.version}</version>
 					<configuration>
 						<links>
-							<link>http://logging.apache.org/log4j/1.2/apidocs</link>
-							<link>http://www.slf4j.org/api</link>
+							<link>https://projectlombok.org/api</link>
+							<link>https://www.slf4j.org/apidocs</link>
+							<link>http://junit.org/junit4/javadoc/latest</link>
+							<link>https://static.javadoc.io/org.mockito/mockito-core/${mockito.version}</link>
 						</links>
 					</configuration>
 				</plugin>
